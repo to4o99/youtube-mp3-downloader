@@ -22,7 +22,4 @@ for line in file.readlines():
     print('Download: ', index, '/', num_lines)
     index += 1
 
-# Download one link (hard coded)
-# yt = YouTube('youtube_link')
-# stream = yt.streams.filter(mime_type='audio/mp4').last()
-# stream.download('download', 'song_name.mp3')
+print('Complete!')
