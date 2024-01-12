@@ -1,9 +1,15 @@
 from pytube import YouTube
 from youtubesearchpython import VideosSearch
 
-file = open('to_download.txt', encoding='utf-8', mode='r')
+file_name = 'to_download.txt'
+try:
+    file = open(file_name, encoding='utf-8', mode='r')
+except FileNotFoundError:
+    file = open(file_name, mode='x')
+    print('List you song in the ' + file_name + ' file!')
+    quit()
 
-num_lines = sum(1 for _ in open('to_download.txt'))
+num_lines = sum(1 for _ in open(file_name))
 songs = []
 
 index = 1
