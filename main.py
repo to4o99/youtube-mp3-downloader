@@ -1,4 +1,4 @@
-print('Download a list of song from to_download.txt file (d) or a songle link (s), [d/s]?')
+print('Download a list of songs from to_download.txt file (d) or a single link (s), [d/s]?')
 action = input()
 
 match action:
