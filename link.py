@@ -1,5 +1,7 @@
 import os
 from pytube import YouTube
+from pydub import AudioSegment
+import shutil
 
 print('Enter video link:')
 link = input()
@@ -25,6 +27,14 @@ if name != '':
     pass
 else:
     name = yt.title
-stream.download('download', name + '.mp3')
+stream.download('temp', name)
+
+if not os.path.exists('download'):
+    os.makedirs('download')
+
+AudioSegment.from_file('temp/' + name).export("download/" + name, format="mp3")
+
+shutil.rmtree('temp')
 
 print('Done!')
+quit()
