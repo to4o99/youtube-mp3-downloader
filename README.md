@@ -1,2 +1,4 @@
 # Youtube mp3 Downloader
-## Run the main.py and choose to download a list of songs from the to_download.txt file or a single link
+1. Install [pipenv](https://pipenv.pypa.io/en/latest/)
+2. Run `pipenv sync`
+3. Star the program from main.py with `pipenv run python3 main.py` - for linux
